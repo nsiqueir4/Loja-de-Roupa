@@ -1,42 +1,131 @@
+/*.color1 { #d0b490 };
+.color2 { #dcc7ac };
+.color3 { #e7dac8 };
+.color4 { #f3ece3 };
+.color5 { #ffffff };*/
+
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #efedea;
+    margin: 0;
+    padding: 0;
 }
 
-#divBusca{
-    display: flex;                 /* Define o contêiner como flexível */
-    align-items: center;           /* Centraliza os itens horizontalmente */
-    justify-content: center;       /* Centraliza os itens verticalmente */
-    height: 100px;                 /* Ajuste a altura conforme necessário */
-    padding: 20px;                 /* Espaçamento interno */
-    background-color: #f0f0f0;     /* Cor de fundo para visualização (opcional) */
-  }
-  
-  #txtBusca{
-    justify-items: flex-start;
+#divBusca {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Alinha os itens no centro */
+    height: 100px;
+    padding: 20px;
+    background-color: transparent;
+}
+
+#txtBusca {
     border: none;
-  }
-  #txtBusca:hover {
-    border-bottom: 2px solid #000;  
+    background: none;
+}
+
+#txtBusca:hover {
+    border-bottom: 2px solid #000;
     transition: border-bottom 0.1s ease-in;
-  }
-  #txtBusca:focus {
-    border-bottom: 2px solid #000; 
-    outline: none;                  
-  }
+}
 
-  #img_logo {
-    display: flex;               
-    justify-content: center;     
-    align-items: center;         
-    height: 60px;
-    margin-left: 100px; 
-    position: absolute;
-  }
+#txtBusca:focus {
+    border-bottom: 2px solid #000;
+    outline: none;
+}
 
-  nav {
-    display: flex;                   /* Define o nav como um contêiner flexível */
-    align-items: center;             /* Alinha os itens verticalmente ao centro */
-    justify-content: left;  /* Espaça os itens entre a esquerda e direita */
-    padding: 10px 20px;              /* Espaçamento interno da barra de navegação */
-    height: 70px;                    /* Ajuste a altura conforme necessário */
+nav {
+    box-shadow: 0 4px 8px #d4d4d4;
+    display: flex;
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #adbc9f;  /* Mesma cor de fundo do corpo */
+    height: 70px;
+}
+
+#imgLogo {
+    margin-left: 260px;  /* Ajuste o espaçamento conforme necessário */
+}
+
+#navLinks {
+    color: #12372a;
+    font-size: small;
+    margin-left: 300px;
+    display: flex;  /* Usa Flexbox para colocar os links lado a lado */
+}
+
+#navLinks a {
+    color: #000;  /* Cor do texto do link */
+    text-decoration: none;  /* Remove o sublinhado do link */
+    padding: 10px 15px;  /* Espaçamento interno para tornar o link clicável maior */
+    transition: color 0.3s ease;  /* Transição suave ao mudar a cor */
+}
+
+#navLinks a:hover {
+    color: #436850;  /* Cor ao passar o mouse por cima */
+    text-decoration: underline;
+}
+
+nav button {
+        all: unset;  /* Remove todos os estilos padrão do botão */
+        display: inline;  /* Define o display como inline para que o botão se comporte como um elemento de linha */
+        cursor: pointer;  /* Adiciona o cursor pointer para indicar que é clicável */
+        background: transparent;  /* Remove a cor de fundo */
+        border: none;  /* Remove a borda padrão */
+        padding: 0;  /* Remove o preenchimento padrão */
+        margin: 0;  /* Remove a margem padrão */
+        font: inherit;  /* Faz com que a fonte herde da fonte pai */
+        text-align: center;  /* Centraliza o texto */
+        text-decoration: none;  /* Remove a decoração de texto padrão */    
+}
+
+nav li {
+    cursor: pointer;
+    font-size: small;
+    list-style-type: none;
+    padding: 10px 15px;
+    margin-left: 100px;
+}
+nav li:hover {
+    color: #436850;
+}
+
+li a {
+    color: #000;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #436850;
+}
+
+/* Estilo para o submenu (dropdown) */
+.submenu {
+    display: none;  /* Esconde o submenu por padrão */
+    position: absolute;  /* Posiciona o submenu de forma absoluta */
+    top: 100%;  /* Posiciona o submenu logo abaixo do item principal */
+    left: 0;
+    background-color: #444;  /* Cor de fundo do submenu */
+    padding: 10px 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.submenu li {
+    width: 150px;  /* Largura dos itens do submenu */
+}
+
+.submenu a {
+    padding: 10px 15px;  /* Espaçamento dentro dos itens do submenu */
+    color: black;
+}
+
+.submenu a:hover {
+    background-color: #555;  /* Muda a cor de fundo ao passar o mouse no submenu */
+}
+
+/* Mostra o submenu ao passar o mouse no item pai */
+.dropdown:hover .submenu {
+    display: block;  /* Mostra o submenu */
 }
