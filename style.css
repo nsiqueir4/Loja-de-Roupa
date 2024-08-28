@@ -1,0 +1,42 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#divBusca{
+    display: flex;                 /* Define o contêiner como flexível */
+    align-items: center;           /* Centraliza os itens horizontalmente */
+    justify-content: center;       /* Centraliza os itens verticalmente */
+    height: 100px;                 /* Ajuste a altura conforme necessário */
+    padding: 20px;                 /* Espaçamento interno */
+    background-color: #f0f0f0;     /* Cor de fundo para visualização (opcional) */
+  }
+  
+  #txtBusca{
+    justify-items: flex-start;
+    border: none;
+  }
+  #txtBusca:hover {
+    border-bottom: 2px solid #000;  
+    transition: border-bottom 0.1s ease-in;
+  }
+  #txtBusca:focus {
+    border-bottom: 2px solid #000; 
+    outline: none;                  
+  }
+
+  #img_logo {
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    height: 60px;
+    margin-left: 100px; 
+    position: absolute;
+  }
+
+  nav {
+    display: flex;                   /* Define o nav como um contêiner flexível */
+    align-items: center;             /* Alinha os itens verticalmente ao centro */
+    justify-content: left;  /* Espaça os itens entre a esquerda e direita */
+    padding: 10px 20px;              /* Espaçamento interno da barra de navegação */
+    height: 70px;                    /* Ajuste a altura conforme necessário */
+}
