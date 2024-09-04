@@ -1,9 +1,4 @@
-/*.color1 { #d0b490 };
-.color2 { #dcc7ac };
-.color3 { #e7dac8 };
-.color4 { #f3ece3 };
-.color5 { #ffffff };*/
-
+/* Estilos globais */
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #efedea;
@@ -11,10 +6,11 @@ body {
     padding: 0;
 }
 
+/* Estilos para o cabeçalho e a barra de busca */
 #divBusca {
     display: flex;
     align-items: center;
-    justify-content: center;  /* Alinha os itens no centro */
+    justify-content: center;
     height: 100px;
     padding: 20px;
     background-color: transparent;
@@ -38,94 +34,107 @@ body {
 nav {
     box-shadow: 0 4px 8px #d4d4d4;
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding: 10px 20px;
-    background-color: #adbc9f;  /* Mesma cor de fundo do corpo */
+    background-color: #ffffff;
     height: 70px;
 }
 
 #imgLogo {
-    margin-left: 260px;  /* Ajuste o espaçamento conforme necessário */
+    margin-left: 260px;
 }
 
 #navLinks {
     color: #12372a;
     font-size: small;
     margin-left: 300px;
-    display: flex;  /* Usa Flexbox para colocar os links lado a lado */
+    display: flex;
 }
 
 #navLinks a {
-    color: #000;  /* Cor do texto do link */
-    text-decoration: none;  /* Remove o sublinhado do link */
-    padding: 10px 15px;  /* Espaçamento interno para tornar o link clicável maior */
-    transition: color 0.3s ease;  /* Transição suave ao mudar a cor */
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
 }
 
 #navLinks a:hover {
-    color: #436850;  /* Cor ao passar o mouse por cima */
+    color: #1693a5;
     text-decoration: underline;
 }
-
-nav button {
-        all: unset;  /* Remove todos os estilos padrão do botão */
-        display: inline;  /* Define o display como inline para que o botão se comporte como um elemento de linha */
-        cursor: pointer;  /* Adiciona o cursor pointer para indicar que é clicável */
-        background: transparent;  /* Remove a cor de fundo */
-        border: none;  /* Remove a borda padrão */
-        padding: 0;  /* Remove o preenchimento padrão */
-        margin: 0;  /* Remove a margem padrão */
-        font: inherit;  /* Faz com que a fonte herde da fonte pai */
-        text-align: center;  /* Centraliza o texto */
-        text-decoration: none;  /* Remove a decoração de texto padrão */    
+nav a{
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-nav li {
+nav a:hover{
+    color: #1693a5;
+    text-decoration: underline;
+
+}
+nav button {
+    all: unset;
+    display: inline;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* Estilos para o menu de navegação principal */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    text-decoration: none;
+    position: relative; /* Necessário para o submenu */
     cursor: pointer;
     font-size: small;
     list-style-type: none;
     padding: 10px 15px;
-    margin-left: 100px;
+    margin-left: 30px;
 }
-nav li:hover {
+
+nav ul li:hover {
     color: #436850;
 }
 
-li a {
-    color: #000;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: #436850;
-}
-
-/* Estilo para o submenu (dropdown) */
+/* Estilos para o submenu */
 .submenu {
-    display: none;  /* Esconde o submenu por padrão */
-    position: absolute;  /* Posiciona o submenu de forma absoluta */
-    top: 100%;  /* Posiciona o submenu logo abaixo do item principal */
-    left: 0;
-    background-color: #444;  /* Cor de fundo do submenu */
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-left: 0;
+    background-color: #d8d8c0;
     padding: 10px 0;
-    list-style-type: none;
+    list-style: none;
     margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .submenu li {
-    width: 150px;  /* Largura dos itens do submenu */
+    width: 150px;
 }
 
 .submenu a {
-    padding: 10px 15px;  /* Espaçamento dentro dos itens do submenu */
+    display: block;
+    padding: 10px 15px;
     color: black;
+    text-decoration: none;
+    background-color: #d8d8c0;
 }
 
 .submenu a:hover {
-    background-color: #555;  /* Muda a cor de fundo ao passar o mouse no submenu */
+    text-decoration: underline;
+    color: #000;
 }
 
 /* Mostra o submenu ao passar o mouse no item pai */
 .dropdown:hover .submenu {
-    display: block;  /* Mostra o submenu */
+    display: block;
 }
